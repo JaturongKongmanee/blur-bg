@@ -1,0 +1,195 @@
+body {
+  /* height: 100vh; */
+  background-color: #000;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(180deg, #db302a 0%, #62186b 100%) no-repeat;
+}
+
+.blur-element {
+  filter: blur(var(--blur));
+  -webkit-filter: blur(var(--blur));
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.blur-element::after {
+  filter: blur(--blur);
+  -webkit-filter: blur(--blur);
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.border-element {
+  border: 2px dashed red;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.button {
+  width: 170px;
+  height: 40px;
+  border: none;
+  background-color: #5ab6f7;
+  color: #fdfdfd;
+  font-size: 14px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.slidecontainer {
+  width: 200px; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background-image: "assets/slide-bar.png";
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 25px;
+  border: 0;
+  background-image: "assets/slide-bar.png";
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-minmax {
+  margin-top: 30px;
+  width: 608px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.box-minmax span:first-child {
+  margin-left: 10px;
+}
+
+.range-slider {
+  margin-top: 30vh;
+}
+
+.rs-range {
+  margin-top: 29px;
+  width: 600px;
+  -webkit-appearance: none;
+}
+
+.rs-range:focus {
+  outline: none;
+}
+
+.rs-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+.rs-range::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+.rs-range::-webkit-slider-thumb {
+  box-shadow: none;
+  border: 0px solid #ffffff;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  height: 42px;
+  width: 22px;
+  border-radius: 22px;
+  background: white;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -20px;
+}
+
+.rs-range::-moz-range-thumb {
+  box-shadow: none;
+  border: 0px solid #ffffff;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  height: 42px;
+  width: 22px;
+  border-radius: 22px;
+  background: white;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -20px;
+}
+
+.rs-range::-moz-focus-outer {
+  border: 0;
+}
+
+.rs-label {
+  position: relative;
+  transform-origin: center center;
+  display: block;
+  width: 98px;
+  height: 98px;
+  background: transparent;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 22px;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  margin-top: 20px;
+  margin-left: -38px;
+  left: attr(value);
+  color: #fff;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 36px;
+}
+
+.rs-label::after {
+  content: "level";
+  display: block;
+  font-size: 20px;
+  letter-spacing: 0.07em;
+  margin-top: -2px;
+}
