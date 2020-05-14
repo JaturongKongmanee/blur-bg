@@ -6,60 +6,65 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <button data-ig="true" class="enableEvent button">
-      Add Event Listener
-    </button>
-    <button data-ig="true" class="disableEvent button">
-      Remove Event Listener
-    </button>
-    <button data-ig="true" class="removeAllBlur button">Remove All Blur</button>
+    <div id="my-card">
+      <div id="my-card-container">
+        <div data-ig="true" id="demo-container">
+          <img
+            data-ig="true"
+            id="imageTest"
+            src="assets/porsche-911-carrera-4s-4096x2625-2019-4k-16828.jpeg"
+            alt="Flowers in Chania"
+            width="300"
+            height="185"
+            class="blur-element"
+          />
+        </div>
 
-    <!-- <div data-ig="true" class="slidecontainer">
-      Pick blue level: <span id="demo"></span>
-      <input
-        data-ig="true"
-        type="range"
-        min="0"
-        max="10"
-        value="5"
-        class="slider"
-        id="myRange"
-      />
-    </div> -->
+        <div data-ig="true" class="container">
+          <div data-ig="true" class="range-slider">
+            <span data-ig="true" id="rs-bullet" class="rs-label">0</span>
+            <input
+              data-ig="true"
+              id="rs-range-line"
+              class="rs-range"
+              type="range"
+              value="0"
+              min="0"
+              max="100"
+            />
+          </div>
 
-    <div data-ig="true" class="container">
-      <div data-ig="true" class="range-slider">
-        <span data-ig="true" id="rs-bullet" class="rs-label">0</span>
-        <input
-          data-ig="true"
-          id="rs-range-line"
-          class="rs-range"
-          type="range"
-          value="0"
-          min="0"
-          max="100"
-        />
-      </div>
+          <div data-ig="true" class="box-minmax">
+            <span>0</span><span>10</span>
+          </div>
+        </div>
 
-      <div data-ig="true" class="box-minmax">
-        <span>0</span><span>200</span>
+        <div id="menu-desc-container">
+          <span id="menu-desc">Menu Description</span>
+        </div>
+
+        <div id="menu-container">
+          <!-- <input
+            type="image"
+            src="assets/slide-bar.png"
+            class="enableEvent button"
+          /> -->
+          <button data-ig="true" class="enableEvent button">
+            Blur
+          </button>
+          <button data-ig="true" class="disableEvent button">
+            Exit
+          </button>
+          <button data-ig="true" class="removeAllBlur button">
+            Rem
+          </button>
+          <button data-ig="true" class="removeAllBlur button">
+            Rem
+          </button>
+        </div>
       </div>
     </div>
-
-    <div data-ig="true" class="slidecontainer">
-      Result:
-      <img
-        data-ig="true"
-        id="imageTest"
-        src="assets/car.jpeg"
-        alt="Flowers in Chania"
-        width="300"
-        height="185"
-        class="blur-element"
-      />
-    </div>
-
-    <h1 class="test">Try to blur any element bwlow on this page</h1>
+    <!-- <h1 class="test">Try to blur any element bwlow on this page</h1>
     <p>This is a paragraph.</p>
 
     <h2>HTML Image</h2>
@@ -76,7 +81,7 @@
       alt="Flowers in Chania"
       width="460"
       height="345"
-    />
+    /> -->
 
     <script src="app.js"></script>
   </body>

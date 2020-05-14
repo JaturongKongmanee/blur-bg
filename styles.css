@@ -1,5 +1,5 @@
 body {
-  /* height: 100vh; */
+  height: 100vh;
   background-color: #000;
   font-family: "Roboto", sans-serif;
   background: linear-gradient(180deg, #db302a 0%, #62186b 100%) no-repeat;
@@ -27,57 +27,6 @@ body {
   cursor: grab;
 }
 
-.button {
-  width: 170px;
-  height: 40px;
-  border: none;
-  background-color: #5ab6f7;
-  color: #fdfdfd;
-  font-size: 14px;
-  border-radius: 5px;
-  margin: 20px;
-}
-
-.slidecontainer {
-  width: 200px; /* Width of the outside container */
-}
-
-/* The slider itself */
-.slider {
-  -webkit-appearance: none; /* Override default CSS styles */
-  appearance: none;
-  width: 100%; /* Full-width */
-  height: 25px; /* Specified height */
-  background: #d3d3d3; /* Grey background */
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
-  transition: opacity 0.2s;
-}
-
-/* Mouse-over effects */
-.slider:hover {
-  opacity: 1; /* Fully shown on mouse-over */
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 23px;
-  height: 24px;
-  border: 0;
-  background-image: "assets/slide-bar.png";
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 23px;
-  height: 25px;
-  border: 0;
-  background-image: "assets/slide-bar.png";
-  cursor: pointer;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -85,26 +34,26 @@ body {
   justify-content: center;
 }
 
+.range-slider {
+  /* margin-top: 30vh; */
+}
+
 .box-minmax {
-  margin-top: 30px;
-  width: 608px;
+  margin-top: 8px;
+  width: 300px;
   display: flex;
   justify-content: space-between;
-  font-size: 20px;
+  font-size: 16px;
   color: #ffffff;
 }
 
 .box-minmax span:first-child {
-  margin-left: 10px;
-}
-
-.range-slider {
-  margin-top: 30vh;
+  margin-left: 1px;
 }
 
 .rs-range {
-  margin-top: 29px;
-  width: 600px;
+  margin-top: 20px;
+  width: 300px;
   -webkit-appearance: none;
 }
 
@@ -136,26 +85,28 @@ body {
   box-shadow: none;
   border: 0px solid #ffffff;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-  height: 42px;
-  width: 22px;
+  height: 22px;
+  width: 12px;
   border-radius: 22px;
   background: white;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -20px;
+  margin-top: -10px;
+  /* border: 1px dashed red; */
 }
 
 .rs-range::-moz-range-thumb {
   box-shadow: none;
   border: 0px solid #ffffff;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-  height: 42px;
-  width: 22px;
+  height: 22px;
+  width: 12px;
   border-radius: 22px;
   background: white;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -20px;
+  margin-top: -10px;
+  /* border: 1px dashed red; */
 }
 
 .rs-range::-moz-focus-outer {
@@ -166,30 +117,86 @@ body {
   position: relative;
   transform-origin: center center;
   display: block;
-  width: 98px;
-  height: 98px;
+  width: 45px;
+  height: 45px;
   background: transparent;
   border-radius: 50%;
   line-height: 30px;
   text-align: center;
   font-weight: bold;
-  padding-top: 22px;
+  padding-top: 4px;
   box-sizing: border-box;
   border: 2px solid #fff;
-  margin-top: 20px;
-  margin-left: -38px;
+  margin-top: 10px;
+  margin-left: -16px;
   left: attr(value);
   color: #fff;
   font-style: normal;
   font-weight: normal;
   line-height: normal;
-  font-size: 36px;
+  font-size: 18px;
 }
 
 .rs-label::after {
   content: "level";
   display: block;
-  font-size: 20px;
+  font-size: 10px;
   letter-spacing: 0.07em;
   margin-top: -2px;
+}
+
+#my-card {
+  background-color: #48485a;
+  width: 348px;
+  /* height: 430px; */
+  height: 465px;
+  position: relative;
+  /* opacity: 0.5; */
+  /* Add the blur effect */
+  /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+
+#my-card-container {
+  padding: 0px 10px;
+}
+
+#demo-container {
+  text-align: center;
+  padding: 12px;
+}
+
+#menu-desc-container {
+  text-align: center;
+  margin: 16px 10px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+#menu-des {
+  justify-content: center;
+}
+
+#menu-container {
+  text-align: center;
+  /* position: relative; */
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  /* background-color: #5ab6f7; */
+  color: #fdfdfd;
+  font-size: 14px;
+  border-radius: 5px;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: transparent;
+  text-align: center;
+  padding: 5px;
 }

@@ -79,7 +79,7 @@ rangeSlider.addEventListener("input", showSliderValue, false);
 function showSliderValue() {
   rangeBullet.innerHTML = rangeSlider.value / 10;
   var bulletPosition = rangeSlider.value / rangeSlider.max;
-  rangeBullet.style.left = bulletPosition * 578 + "px";
+  rangeBullet.style.left = bulletPosition * 292 + "px";
   blurLevel = rangeSlider.value / 10;
   imgTest.style.setProperty(`--blur`, rangeSlider.value / 10 + "px");
 }
