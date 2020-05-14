@@ -1,5 +1,5 @@
 body {
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #000;
   font-family: "Roboto", sans-serif;
   background: linear-gradient(180deg, #db302a 0%, #62186b 100%) no-repeat;
@@ -9,22 +9,25 @@ body {
   filter: blur(var(--blur));
   -webkit-filter: blur(var(--blur));
   /* background-color: rgba(0, 0, 0, 0.4); */
-  cursor: -webkit-grab;
-  cursor: grab;
+  /* cursor: -webkit-grab;
+  cursor: grab; */
 }
 
 .blur-element::after {
   filter: blur(--blur);
   -webkit-filter: blur(--blur);
   /* background-color: rgba(0, 0, 0, 0.4); */
-  cursor: -webkit-grab;
-  cursor: grab;
+  /* cursor: -webkit-grab;
+  cursor: grab; */
 }
 
 .border-element {
-  border: 2px dashed red;
+  /* border: 2px dashed red; */
   cursor: -webkit-grab;
   cursor: grab;
+  border: 1px solid #48485a;
+  /* padding: 1px;
+  box-shadow: 1px 1px #888888; */
 }
 
 .container {
@@ -201,6 +204,7 @@ body {
   padding: 10px;
   cursor: -webkit-grab;
   cursor: grab;
+  outline: none;
 }
 
 #imageTest {
@@ -217,6 +221,17 @@ svg {
   max-height: 22px;
 }
 
-.clicked {
+#cursor-blur:hover,
+#remove-blur:hover,
+#exit-blur:hover {
+  transform: scale(1.1);
+}
+
+.clicked-menu-bg {
   background-color: #1db954;
+}
+
+img {
+  height: auto;
+  width: 100%;
 }

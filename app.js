@@ -35,7 +35,7 @@ let addEvent = () => {
 let removeEvent = () => {
   let elements = document.body.querySelectorAll("*");
   elements.forEach((ele) => {
-    console.log("removing listener...", ele);
+    // console.log("removing listener...", ele);
     ele.removeEventListener("mouseenter", addBorder, true);
     ele.removeEventListener("mouseleave", removeBorder, true);
     ele.removeEventListener("click", toggleBlur, true);
@@ -56,6 +56,7 @@ let menuDesc = document.querySelector("#menu-desc");
 
 function updateDesc(e) {
   menuDesc.innerHTML = e.target.dataset.name;
+  // Add some animation here
 }
 
 let enableEvent = document.querySelector("#cursor-blur");
@@ -94,3 +95,37 @@ function showSliderValue() {
   blurLevel = rangeSlider.value / 10;
   imgTest.style.setProperty(`--blur`, rangeSlider.value / 10 + "px");
 }
+
+let menuIcon = document.querySelector("#menu-container");
+let menuList = menuIcon.querySelectorAll("button");
+menuList.forEach((ele) => {
+  ele.dataset.clicked = "false";
+});
+
+menuIcon.addEventListener("click", (e) => {
+  console.log("HHHHH", e.target);
+  if (e.target.id === "menu-container") return;
+  if (e.target.dataset.clicked === "true") return;
+
+  // Otherwise, Disable others
+  menuList.forEach((ele) => {
+    if (ele.dataset.clicked === "true") {
+      // remove bg
+      ele.classList.remove("clicked-menu-bg");
+      // set data-clicked == false
+      ele.dataset.clicked = "false";
+    }
+  });
+
+  // Enable
+  if (e.target.nodeName === "path") {
+    e.target.parentNode.parentNode.classList.add("clicked-menu-bg");
+    e.target.parentNode.parentNode.dataset.clicked = "true";
+  } else if (e.target.nodeName === "svg") {
+    e.target.parentNode.classList.add("clicked-menu-bg");
+    e.target.parentNode.dataset.clicked = "true";
+  } else {
+    e.target.classList.add("clicked-menu-bg");
+    e.target.dataset.clicked = "true";
+  }
+});
