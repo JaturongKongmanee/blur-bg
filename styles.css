@@ -166,6 +166,8 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   backdrop-filter: blur(10px);
+  display: inline-block;
+  border-radius: 10px;
 }
 
 #my-card-container {
@@ -234,7 +236,8 @@ svg {
 }
 
 .clicked-menu-bg {
-  background-color: #1db954;
+  /* background-color: #1db954; */
+  background-color: #264d59;
 }
 
 img {
