@@ -166,6 +166,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: inline-block;
   border-radius: 10px;
 }
