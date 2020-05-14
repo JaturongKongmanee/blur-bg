@@ -1,4 +1,4 @@
-let blurLevel = 0;
+let blurLevel = 5;
 
 function addBorder(e) {
   e.target.classList.add("border-element");
@@ -72,7 +72,7 @@ disableEvent.addEventListener("mouseenter", updateDesc);
 removeAllBlur.addEventListener("click", removeAllBlurEle);
 removeAllBlur.addEventListener("mouseenter", updateDesc);
 
-var imgTest = document.getElementById("imageTest");
+let imgTest = document.getElementById("imageTest");
 // output.innerHTML = slider.value; // Display the default slider value
 imgTest.style.setProperty(`--blur`, blurLevel + "px");
 
@@ -83,18 +83,21 @@ imgTest.style.setProperty(`--blur`, blurLevel + "px");
 //   imgTest.style.setProperty(`--blur`, this.value + "px");
 // };
 
-var rangeSlider = document.getElementById("rs-range-line");
-var rangeBullet = document.getElementById("rs-bullet");
+let rangeSlider = document.getElementById("rs-range-line");
+let rangeBullet = document.getElementById("rs-bullet");
 
 rangeSlider.addEventListener("input", showSliderValue, false);
 
 function showSliderValue() {
   rangeBullet.innerHTML = rangeSlider.value / 10;
-  var bulletPosition = rangeSlider.value / rangeSlider.max;
+  let bulletPosition = rangeSlider.value / rangeSlider.max;
+  // console.log(rangeSlider.value, bulletPosition);
   rangeBullet.style.left = bulletPosition * 292 + "px";
   blurLevel = rangeSlider.value / 10;
   imgTest.style.setProperty(`--blur`, rangeSlider.value / 10 + "px");
 }
+
+showSliderValue();
 
 let menuIcon = document.querySelector("#menu-container");
 let menuList = menuIcon.querySelectorAll("button");
