@@ -50,6 +50,7 @@ let removeAllBlurEle = () => {
       ele.dataset.blur = "false";
     }
   });
+  removeEvent();
 };
 
 let menuDesc = document.querySelector("#menu-desc");
