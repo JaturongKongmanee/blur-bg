@@ -5,6 +5,11 @@ body {
   background: linear-gradient(180deg, #db302a 0%, #62186b 100%) no-repeat;
 }
 
+svg {
+  width: 20px;
+  max-height: 22px;
+}
+
 .blur-element {
   filter: blur(var(--blur));
   -webkit-filter: blur(var(--blur));
