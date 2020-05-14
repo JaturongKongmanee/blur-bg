@@ -211,3 +211,12 @@ body {
   height: 100%;
   filter: invert(1);
 }
+
+svg {
+  width: 20px;
+  max-height: 22px;
+}
+
+.clicked {
+  background-color: #1db954;
+}
