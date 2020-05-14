@@ -66,12 +66,15 @@ let removeAllBlur = document.querySelector("#remove-blur");
 
 enableEvent.addEventListener("click", addEvent);
 enableEvent.addEventListener("mouseenter", updateDesc);
+enableEvent.addEventListener("mouseleave", updateDesc);
 
 disableEvent.addEventListener("click", removeEvent);
 disableEvent.addEventListener("mouseenter", updateDesc);
+disableEvent.addEventListener("mouseleave", updateDesc);
 
 removeAllBlur.addEventListener("click", removeAllBlurEle);
 removeAllBlur.addEventListener("mouseenter", updateDesc);
+removeAllBlur.addEventListener("mouseleave", updateDesc);
 
 let imgTest = document.getElementById("imageTest");
 // output.innerHTML = slider.value; // Display the default slider value
