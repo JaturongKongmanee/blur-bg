@@ -6,8 +6,8 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <div id="my-card">
-      <div id="my-card-container">
+    <div data-ig="true" id="my-card">
+      <div data-ig="true" id="my-card-container">
         <div data-ig="true" id="demo-container">
           <img
             data-ig="true"
@@ -39,32 +39,67 @@
           </div>
         </div>
 
-        <div id="menu-desc-container">
-          <span id="menu-desc">Menu Description</span>
+        <div data-ig="true" id="menu-desc-container">
+          <span data-ig="true" id="menu-desc">Blur Element</span>
         </div>
 
-        <div id="menu-container">
-          <input
+        <div data-ig="true" id="menu-container">
+          <!-- <input
             type="image"
-            src="assets/download.png"
+            src="assets/cusor.png"
             class="enableEvent button"
           />
-          <button data-ig="true" class="enableEvent button">
-            Blur
+          <input
+            type="image"
+            src="assets/edit-text.png"
+            class="enableEvent button"
+          />
+          <input
+            type="image"
+            src="assets/remove.png"
+            class="enableEvent button"
+          />
+          <input
+            type="image"
+            src="assets/exit.png"
+            class="enableEvent button"
+          /> -->
+          <button
+            data-ig="true"
+            data-name="Blur Element"
+            id="cursor-blur"
+            class="enableEvent button"
+          >
+            <img data-ig="true" src="assets/cusor.png" alt="Blur Element" />
           </button>
-          <button data-ig="true" class="disableEvent button">
-            Exit
+          <!-- <button
+            data-ig="true"
+            id="drag-text-blur"
+            class="disableEvent button"
+          >
+            <img src="assets/edit-text.png" alt="Flowers in Chania" />
+          </button> -->
+          <button
+            data-ig="true"
+            data-name="Remove All Blur"
+            id="remove-blur"
+            class="removeAllBlur button"
+          >
+            <img data-ig="true" src="assets/remove.png" alt="Remove All Blur" />
           </button>
-          <button data-ig="true" class="removeAllBlur button">
-            Rem
-          </button>
-          <button data-ig="true" class="removeAllBlur button">
-            Rem
+          <button
+            data-ig="true"
+            data-name="Exit Blur"
+            id="exit-blur"
+            class="removeAllBlur button"
+          >
+            <img data-ig="true" src="assets/exit.png" alt="Exit Blura" />
           </button>
         </div>
       </div>
     </div>
-    <!-- <h1 class="test">Try to blur any element bwlow on this page</h1>
+
+    <h1 class="test">Try to blur any element bwlow on this page</h1>
     <p>This is a paragraph.</p>
 
     <h2>HTML Image</h2>
@@ -78,22 +113,6 @@
     <h2>HTML Image</h2>
     <img
       src="assets/car-slide.jpeg"
-      alt="Flowers in Chania"
-      width="460"
-      height="345"
-    /> -->
-
-
-    <div id="menu-container">
-      <input
-        type="image"
-        src="assets/Pngtree—cursor click icon graphic design_3985829.png"
-        class="enableEvent button"
-      />
-
-
-      <img
-      src="assets/Pngtree—cursor click icon graphic design_3985829.png"
       alt="Flowers in Chania"
       width="460"
       height="345"

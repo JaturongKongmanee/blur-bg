@@ -52,13 +52,24 @@ let removeAllBlurEle = () => {
   });
 };
 
-let enableEvent = document.querySelector(".enableEvent");
-let disableEvent = document.querySelector(".disableEvent");
-let removeAllBlur = document.querySelector(".removeAllBlur");
+let menuDesc = document.querySelector("#menu-desc");
+
+function updateDesc(e) {
+  menuDesc.innerHTML = e.target.dataset.name;
+}
+
+let enableEvent = document.querySelector("#cursor-blur");
+let disableEvent = document.querySelector("#exit-blur");
+let removeAllBlur = document.querySelector("#remove-blur");
 
 enableEvent.addEventListener("click", addEvent);
+enableEvent.addEventListener("mouseenter", updateDesc);
+
 disableEvent.addEventListener("click", removeEvent);
+disableEvent.addEventListener("mouseenter", updateDesc);
+
 removeAllBlur.addEventListener("click", removeAllBlurEle);
+removeAllBlur.addEventListener("mouseenter", updateDesc);
 
 var imgTest = document.getElementById("imageTest");
 // output.innerHTML = slider.value; // Display the default slider value
